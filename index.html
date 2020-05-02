@@ -36,10 +36,12 @@
 
   <main>
     <section>
-      <picture>
-        <source media="(max-width: 1024px)" srcset="./assets/images/image-intro-mobile.jpg">
-        <img src="./assets/images/image-intro-desktop.jpg" alt="A family of four walking in line and holding hands">
-      </picture>
+      <img
+        srcset="./assets/images/image-intro-mobile.jpg 375w, ./assets/images/image-intro-desktop.jpg 540w"
+        sizes="(max-width: 1024px) 375px, 540px"
+        src="./assets/images/image-intro-desktop.jpg"
+        alt="A family of four walking in line and holding hands"
+      >
       <h1>
         Humanizing your insurance.
       </h1>
