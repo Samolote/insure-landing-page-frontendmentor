@@ -13,7 +13,13 @@
 
   <header class="header">
     <img class="brand header__brand" src="./assets/images/logo.svg" alt="Insure">
-    <nav class="header__nav">
+    <button class="burger">
+      <span class="burger__box">
+        <span class="burger__inner"></span>
+      </span>
+      <!-- <img class="burger__image" src="./assets/images/icon-hamburger.svg" alt=""> -->
+    </button>
+    <nav class="nav header__nav">
       <ul class="nav__list">
         <li class="nav__item">
           <span class="nav__link-placeholder">How we work</span>
@@ -29,13 +35,10 @@
         </li>
       </ul>
     </nav>
-    <button class="burger">
-      <img class="burger__image" src="./assets/images/icon-hamburger.svg" alt="">
-    </button>
   </header>
 
   <main class="main">
-    <section class="hero">
+    <div class="hero">
       <img
         class="image hero__image"
         srcset="./assets/images/image-intro-mobile.jpg 375w, ./assets/images/image-intro-desktop.jpg 540w"
@@ -43,18 +46,20 @@
         src="./assets/images/image-intro-desktop.jpg"
         alt="A family of four walking in line and holding hands"
       >
-      <h1 class="heading hero__heading">
-        Humanizing your insurance.
-      </h1>
-      <p class="text heading__text">
-        Get your life insurance coverage easier and faster. We blend our expertise
-        and technology to help you find the plan that’s right for you. Ensure you
-        and your loved ones are protected.
-      </p>
-      <button class="button heading__button">
-        View plans
-      </button>
-    </section>
+      <section class="hero__text-content">
+        <h1 class="heading hero__heading">
+          Humanizing your insurance.
+        </h1>
+        <p class="text hero__text">
+          Get your life insurance coverage easier and faster. We blend our expertise
+          and technology to help you find the plan that’s right for you. Ensure you
+          and your loved ones are protected.
+        </p>
+        <button class="button hero__button">
+          View plans
+        </button>
+      </section>
+    </div>
 
     <section class="features">
       <h2 class="heading features__heading">
@@ -104,7 +109,7 @@
 
   <footer class="footer">
 
-    <nav class="footer__nav">
+    <nav class="nav footer__nav">
       <div class="footer__list-container list-container--horizontal">
         <img src="./assets/images/logo.svg" alt="Insure">
         <ul class="socials">
