@@ -63,9 +63,8 @@ html {
 	z-index: -1;
 }
 
-.header:focus-within .header__nav {
+.burger--active ~ .header__nav {
 	transform: translateY(0);
-	opacity: 1;
 }
 
 .header__nav {
@@ -79,10 +78,9 @@ html {
 	background-repeat: no-repeat;
 	background-color: var(--very-dark-violet);
 	transform: translateY(-100%);
-	/* opacity: 0; */
 	z-index: -1;
 	color: var(--white);
-	transition: transform var(--default-transition), opacity var(--default-transition);
+	transition: transform var(--default-transition);
 }
 
 .burger {
@@ -104,8 +102,9 @@ html {
 }
 
 .burger__inner {
-	top: 8px;
+	top: 13px;
 	left: 6px;
+	transition: background-color var(--default-transition);
 }
 
 .burger__inner,
@@ -115,6 +114,7 @@ html {
 	width: 16px;
 	height: 2px;
 	background-color: var(--very-dark-violet);
+	transition: transform var(--default-transition);
 }
 
 .burger__inner::before,
@@ -125,11 +125,30 @@ html {
 }
 
 .burger__inner::before {
-	top: 5px;
+	top: -5px;
 }
 
 .burger__inner::after {
-	top: 10px;
+	top: 5px;
+}
+
+.burger:hover .burger__inner::before,
+.burger:hover .burger__inner::after {
+	transform: scaleX(0.85) translateX(-8.5%);
+}
+
+.burger--active .burger__inner {
+	background-color: transparent;
+}
+
+.burger--active .burger__inner::before,
+.burger--active:hover .burger__inner::before {
+	transform: translateY(5px) rotate(45deg);
+}
+
+.burger--active .burger__inner::after,
+.burger--active:hover .burger__inner::after {
+	transform: translateY(-5px) rotate(-45deg);
 }
 
 .hero {
