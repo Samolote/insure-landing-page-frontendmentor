@@ -488,9 +488,13 @@ html {
 	margin: 0 0.5rem;
 }
 
-/* find out how to make this icon get diferent color at hover
+.socials__icon {
+	transition: filter var(--default-transition);
+}
+
 .socials__icon:hover {
-} */
+	filter: hue-rotate(-3deg) brightness(0.34);
+}
 
 .attribution {
 	font-size: 0.733em;
