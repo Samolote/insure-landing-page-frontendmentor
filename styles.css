@@ -60,7 +60,6 @@ html {
 	position: sticky;
 	top: 0;
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
 	padding: 1.5rem;
 	height: 80px;
@@ -82,6 +81,10 @@ html {
 	transform: translateY(0);
 }
 
+.header__brand {
+	margin-right: auto;
+}
+
 .header__nav {
 	position: absolute;
 	top: 100%;
@@ -99,6 +102,8 @@ html {
 }
 
 .nav__list {
+	display: flex;
+	flex-direction: column;
 	margin: 2rem auto;
 	padding: 0;
 	list-style-type: none;
@@ -319,7 +324,6 @@ html {
 .features {
 	display: flex;
 	flex-direction: column;
-	/* justify-content: space-between; */
 	position: relative;
 	padding: 11.5rem 1.5rem 9rem;
 }
@@ -342,8 +346,8 @@ html {
 }
 
 .feature {
+	margin: 0 auto 4rem;
 	max-width: 330px;
-	margin-bottom: 4rem;
 	text-align: center;
 }
 
@@ -419,8 +423,7 @@ html {
 	list-style-type: none;
 }
 
-.footer__link-placeholder,
-.socials__icon {
+.footer__link-placeholder {
 	display: inline-block;
 	cursor: pointer;
 }
@@ -505,6 +508,61 @@ html {
 	}
 }
 
+@media (min-width: 800px) {
+	.burger {
+		display: none;
+	}
+
+	.header__nav {
+		flex-direction: row;
+		position: static;
+		width: auto;
+		height: auto;
+		transform: translateY(0);
+		z-index: auto;
+		background: none;
+		color: var(--dark-grayish-violet);
+	}
+
+	.nav__list {
+		flex-direction: row;
+		font-size: 1em;
+	}
+
+	.nav__item {
+		margin: 0 1rem;
+		width: auto;
+		height: auto;
+	}
+
+	.nav__item:last-child {
+		margin-top: 0;
+		margin-right: 0;
+		border-color: var(--very-dark-violet);
+		color: var(--very-dark-violet);
+	}
+
+	.nav__link-placeholder:hover {
+		color: var(--very-dark-violet);
+	}
+
+	.nav__link-placeholder::before {
+		content: none;
+	}
+
+	.link-placeholder--box {
+		padding: 0.5rem 2rem;
+	}
+
+	.link-placeholder--box:hover {
+		color: var(--white);
+	}
+
+	.link-placeholder--box::after {
+		background-color: var(--very-dark-violet);
+	}
+}
+
 @media (min-width: 1024px) {
 	.header {
 		padding: 0 9vw;
@@ -541,7 +599,9 @@ html {
 	}
 
 	.hero__image {
+		flex-basis: 50%;
 		margin: 0 0 0 auto;
+		width: 50%;
 		transform: translateY(6.5rem);
 	}
 
@@ -592,6 +652,7 @@ html {
 
 	.feature {
 		flex-basis: calc(100% / 3);
+		max-width: 300px;
 		text-align: left;
 	}
 
@@ -640,6 +701,12 @@ html {
 @media (min-width: 1230px) {
 	.hero__text-content::after {
 		content: '';
+	}
+}
+
+@media (min-width: 1300px) {
+	.feature {
+		max-width: 330px;
 	}
 }
 
